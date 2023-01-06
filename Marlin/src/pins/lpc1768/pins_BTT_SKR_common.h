@@ -92,9 +92,15 @@
 #ifndef HEATER_0_PIN
   #define HEATER_0_PIN                     P2_07
 #endif
-// Defined the fan pin myself
-#ifndef FAN1_PIN
-  #define FAN1_PIN                       P2_04
+
+#if HOTENDS == 1
+  #ifndef FAN1_PIN
+    #define FAN1_PIN                       P2_04
+  #endif
+#else
+  #ifndef HEATER_1_PIN
+    #define HEATER_1_PIN                   P2_04
+  #endif
 #endif
 
 #ifndef FAN_PIN
