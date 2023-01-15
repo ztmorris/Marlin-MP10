@@ -669,9 +669,9 @@
     //#define DEFAULT_Ki_LIST {   1.08,   1.08 } //Original
     //#define DEFAULT_Kd_LIST { 114.00, 114.00 } //Original
   #else
-    #define DEFAULT_Kp  29.0
-    #define DEFAULT_Ki   2.0
-    #define DEFAULT_Kd  97.0
+    #define DEFAULT_Kp  17.57
+    #define DEFAULT_Ki   1.09
+    #define DEFAULT_Kd  70.57
     //#define DEFAULT_Kp  22.20 //Original
     //#define DEFAULT_Ki   1.08 //Original
     //#define DEFAULT_Kd 114.00 //Original
@@ -739,7 +739,7 @@
  * the issues involved, don't use bed PID until someone else verifies that your hardware works.
  * @section bed temp
  */
-//#define PIDTEMPBED
+#define PIDTEMPBED
 
 //#define BED_LIMIT_SWITCHING
 
