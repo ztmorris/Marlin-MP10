@@ -160,7 +160,7 @@
 #define X_DRIVER_TYPE  TMC2209
 #define Y_DRIVER_TYPE  TMC2209
 #define Z_DRIVER_TYPE  TMC2209
-#define E0_DRIVER_TYPE TMC2209
+#define E0_DRIVER_TYPE TMC2208_STANDALONE
 
 
 /**
@@ -811,7 +811,7 @@
  *
  * *** IT IS HIGHLY RECOMMENDED TO LEAVE THIS OPTION ENABLED! ***
  */
-#define PREVENT_COLD_EXTRUSION
+//#define PREVENT_COLD_EXTRUSION
 #define EXTRUDE_MINTEMP 180
 
 /**
@@ -1157,7 +1157,7 @@
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 500 }
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 100, 100, 800, 250 } // was 100, 100, 400, 50
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {94.40196356084208,94.33962264150944, 800, 250 } // was 100, 100, 400, 50
 
 /**
  * Default Max Feed Rate (linear=mm/s, rotational=°/s)
@@ -1620,7 +1620,7 @@
 
 // Invert the stepper direction. Change (or reverse the motor connector) if an axis goes the wrong way.
 #define INVERT_X_DIR true // Checks good for MP10
-#define INVERT_Y_DIR true // Checks good for MP10
+#define INVERT_Y_DIR false // Checks good for MP10
 #define INVERT_Z_DIR false // Checks good for MP10
 
 // @section extruder
