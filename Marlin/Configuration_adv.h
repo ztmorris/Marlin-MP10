@@ -2976,9 +2976,9 @@ DI    #define E0_CURRENT      1000
 
   #if EITHER(SENSORLESS_HOMING, SENSORLESS_PROBING)
     // TMC2209: 0...255. TMC2130: -64...63
-    #define X_STALL_SENSITIVITY  150
-    #define Y_STALL_SENSITIVITY  3
-    #define Z_STALL_SENSITIVITY  3
+    #define X_STALL_SENSITIVITY  50
+    #define Y_STALL_SENSITIVITY  10
+    #define Z_STALL_SENSITIVITY  100 // 255 still doesnt stop
     #define IMPROVE_HOMING_RELIABILITY
   #endif
 
