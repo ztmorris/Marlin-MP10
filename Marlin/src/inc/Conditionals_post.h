@@ -2378,7 +2378,7 @@
   #define HAS_TEMP_ADC_7 1
 #endif
 #if HAS_ADC_TEST(BED)
-  #define HAS_TEMP_ADC_BED 1
+  #define HAS_TEMP_ADC_BED 0
 #endif
 #if HAS_ADC_TEST(PROBE)
   #define HAS_TEMP_ADC_PROBE 1
@@ -2401,7 +2401,7 @@
   #define HAS_TEMP_HOTEND 1
 #endif
 #if HAS_TEMP(BED)
-  #define HAS_TEMP_BED 1
+  #define HAS_TEMP_BED 0
 #endif
 #if HAS_TEMP(CHAMBER)
   #define HAS_TEMP_CHAMBER 1
@@ -2460,7 +2460,7 @@
   #define HAS_HEATER_7 1
 #endif
 #if PIN_EXISTS(HEATER_BED)
-  #define HAS_HEATER_BED 1
+  #define HAS_HEATER_BED 0
 #endif
 
 // Shorthand for common combinations

@@ -2741,7 +2741,7 @@
   #endif
 
   #if AXIS_IS_TMC_CONFIG(E0)
-    #define E0_CURRENT      500
+DI    #define E0_CURRENT      1000
     #define E0_MICROSTEPS    16
     #define E0_RSENSE         0.11
     #define E0_CHAIN_POS     -1
@@ -2977,7 +2977,7 @@
   #if EITHER(SENSORLESS_HOMING, SENSORLESS_PROBING)
     // TMC2209: 0...255. TMC2130: -64...63
     #define X_STALL_SENSITIVITY  100
-    #define Y_STALL_SENSITIVITY  255
+    #define Y_STALL_SENSITIVITY  1
     #define Z_STALL_SENSITIVITY  100
     #define IMPROVE_HOMING_RELIABILITY
   #endif
