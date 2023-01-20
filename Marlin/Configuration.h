@@ -1620,7 +1620,7 @@
 
 // Invert the stepper direction. Change (or reverse the motor connector) if an axis goes the wrong way.
 #define INVERT_X_DIR true // Checks good for MP10
-#define INVERT_Y_DIR false // Checks good for MP10
+#define INVERT_Y_DIR true // Checks good for MP10
 #define INVERT_Z_DIR false // Checks good for MP10
 
 // @section extruder
