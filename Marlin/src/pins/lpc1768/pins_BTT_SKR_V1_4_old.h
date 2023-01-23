@@ -63,7 +63,7 @@
 #define X_DIAG_PIN                         P1_29  // X-STOP
 #define Y_DIAG_PIN                         P1_28  // Y-STOP
 #define Z_DIAG_PIN                         P1_27  // Z-STOP
-#define E0_DIAG_PIN                        P1_26  // E0DET
+#define E0_DIAG_PIN                        P0_10  // E0DET
 #define E1_DIAG_PIN                        P1_25  // E1DET
 
 //
@@ -72,16 +72,16 @@
 #ifdef X_STALL_SENSITIVITY
   #define X_STOP_PIN                  X_DIAG_PIN
   #if X_HOME_TO_MIN
-    #define X_MAX_PIN                      P1_26  // E0DET
+    #define X_MAX_PIN                      P1_10  // E0DET
   #else
-    #define X_MIN_PIN                      P1_26  // E0DET
+    #define X_MIN_PIN                      P1_10  // E0DET
   #endif
 #elif ENABLED(X_DUAL_ENDSTOPS)
   #ifndef X_MIN_PIN
     #define X_MIN_PIN                      P1_29  // X-STOP
   #endif
   #ifndef X_MAX_PIN
-    #define X_MAX_PIN                      P1_26  // E0DET
+    #define X_MAX_PIN                      P1_10  // E0DET
   #endif
 #else
   #define X_STOP_PIN                       P1_29  // X-STOP
@@ -129,28 +129,28 @@
 // Z Probe (when not Z_MIN_PIN)
 //
 #ifndef Z_MIN_PROBE_PIN
-  #define Z_MIN_PROBE_PIN                  P0_10
+  #define Z_MIN_PROBE_PIN                  P1_00
 #endif
 
 //
 // Filament Runout Sensor
 //
 #define FIL_RUNOUT_PIN                     P1_26  // E0DET
-#define FIL_RUNOUT2_PIN                    P1_25  // E1DET
+//#define FIL_RUNOUT2_PIN                    P1_25  // E1DET
 
 //
 // Power Supply Control
 //
-#ifndef PS_ON_PIN
-  #define PS_ON_PIN                        P1_00  // PWRDET
-#endif
+// #ifndef PS_ON_PIN
+//   #define PS_ON_PIN                        P1_00  // PWRDET
+// #endif
 
 //
 // Power Loss Detection
 //
-#ifndef POWER_LOSS_PIN
-  #define POWER_LOSS_PIN                   P1_00  // PWRDET
-#endif
+// #ifndef POWER_LOSS_PIN
+//   #define POWER_LOSS_PIN                   P1_00  // PWRDET
+// #endif
 
 //
 // Steppers
@@ -176,18 +176,32 @@
   #define Z_CS_PIN                         P1_08
 #endif
 
-#define E0_STEP_PIN                        P2_13
-#define E0_DIR_PIN                         P0_11
-#define E0_ENABLE_PIN                      P2_12
+// Original Setting
+// #define E0_STEP_PIN                        P2_13
+// #define E0_DIR_PIN                         P0_11
+// #define E0_ENABLE_PIN                      P2_12
+// #ifndef E0_CS_PIN
+//   #define E0_CS_PIN                        P1_04
+// #endif
+
+// #define E1_STEP_PIN                        P1_15
+// #define E1_DIR_PIN                         P1_14
+// #define E1_ENABLE_PIN                      P1_16
+// #ifndef E1_CS_PIN
+//   #define E1_CS_PIN                        P1_01
+// #endif
+#define E0_STEP_PIN                        P1_15
+#define E0_DIR_PIN                         P1_14
+#define E0_ENABLE_PIN                      P1_16
 #ifndef E0_CS_PIN
-  #define E0_CS_PIN                        P1_04
+  #define E0_CS_PIN                        P1_01
 #endif
 
-#define E1_STEP_PIN                        P1_15
-#define E1_DIR_PIN                         P1_14
-#define E1_ENABLE_PIN                      P1_16
+#define E1_STEP_PIN                        P2_13
+#define E1_DIR_PIN                         P0_11
+#define E1_ENABLE_PIN                      P2_12
 #ifndef E1_CS_PIN
-  #define E1_CS_PIN                        P1_01
+  #define E1_CS_PIN                        P1_04
 #endif
 
 #define TEMP_1_PIN                      P0_23_A0  // A0 (T0) - (67) - TEMP_1_PIN
@@ -236,10 +250,10 @@
   #define Z_SERIAL_TX_PIN                  P1_08
   #define Z_SERIAL_RX_PIN        Z_SERIAL_TX_PIN
 
-  #define E0_SERIAL_TX_PIN                 P1_04
+  #define E0_SERIAL_TX_PIN                 P1_01
   #define E0_SERIAL_RX_PIN      E0_SERIAL_TX_PIN
 
-  #define E1_SERIAL_TX_PIN                 P1_01
+  #define E1_SERIAL_TX_PIN                 P1_04
   #define E1_SERIAL_RX_PIN      E1_SERIAL_TX_PIN
 
   // Reduce baud rate to improve software serial reliability
@@ -358,11 +372,11 @@
     #define BEEPER_PIN               EXP1_01_PIN
 
   #elif ENABLED(CR10_STOCKDISPLAY)
+    #define BTN_ENC                  EXP1_02_PIN  // (58) open-drain
     #define LCD_PINS_RS              EXP1_07_PIN
 
     #define BTN_EN1                  EXP1_03_PIN
     #define BTN_EN2                  EXP1_05_PIN
-    #define BTN_ENC                  EXP1_02_PIN
 
     #define LCD_PINS_ENABLE          EXP1_08_PIN
     #define LCD_PINS_D4              EXP1_06_PIN
