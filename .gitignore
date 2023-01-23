@@ -171,3 +171,5 @@ __pycache__
 # IOLogger logs
 *_log.csv
 Marlin/lib/
+Marlin/pins_BTT_SKR_common_og.h
+Marlin/pins_BTT_SKR_V1_4_og.h

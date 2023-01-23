@@ -63,8 +63,8 @@
 #define X_DIAG_PIN                         P1_29  // X-STOP
 #define Y_DIAG_PIN                         P1_28  // Y-STOP
 #define Z_DIAG_PIN                         P1_27  // Z-STOP
-#define E0_DIAG_PIN                        P1_26  // E0DET
-//#define E1_DIAG_PIN                        P1_25  // E1DET
+#define E0_DIAG_PIN                        P0_10  // E0DET
+#define E1_DIAG_PIN                        P1_25  // E1DET
 
 //
 // Limit Switches
@@ -72,16 +72,16 @@
 #ifdef X_STALL_SENSITIVITY
   #define X_STOP_PIN                  X_DIAG_PIN
   #if X_HOME_TO_MIN
-    #define X_MAX_PIN                      P1_26  // E0DET
+    #define X_MAX_PIN                      P1_10  // E0DET
   #else
-    #define X_MIN_PIN                      P1_26  // E0DET
+    #define X_MIN_PIN                      P1_10  // E0DET
   #endif
 #elif ENABLED(X_DUAL_ENDSTOPS)
   #ifndef X_MIN_PIN
     #define X_MIN_PIN                      P1_29  // X-STOP
   #endif
   #ifndef X_MAX_PIN
-    #define X_MAX_PIN                      P1_26  // E0DET
+    #define X_MAX_PIN                      P1_10  // E0DET
   #endif
 #else
   #define X_STOP_PIN                       P1_29  // X-STOP
@@ -90,9 +90,9 @@
 #ifdef Y_STALL_SENSITIVITY
   #define Y_STOP_PIN                  Y_DIAG_PIN
   #if Y_HOME_TO_MIN
-    //#define Y_MAX_PIN                      P1_25  // E1DET
+    #define Y_MAX_PIN                      P1_25  // E1DET
   #else
-    //#define Y_MIN_PIN                      P1_25  // E1DET
+    #define Y_MIN_PIN                      P1_25  // E1DET
   #endif
 #elif ENABLED(Y_DUAL_ENDSTOPS)
   #ifndef Y_MIN_PIN
@@ -129,7 +129,7 @@
 // Z Probe (when not Z_MIN_PIN)
 //
 #ifndef Z_MIN_PROBE_PIN
-  #define Z_MIN_PROBE_PIN                  P1_25
+  #define Z_MIN_PROBE_PIN                  P1_00
 #endif
 
 //
@@ -175,6 +175,7 @@
 #ifndef Z_CS_PIN
   #define Z_CS_PIN                         P1_08
 #endif
+
 // Original Setting
 // #define E0_STEP_PIN                        P2_13
 // #define E0_DIR_PIN                         P0_11
