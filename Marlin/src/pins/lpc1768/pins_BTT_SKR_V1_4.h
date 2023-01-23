@@ -64,7 +64,7 @@
 #define Y_DIAG_PIN                         P1_28  // Y-STOP
 #define Z_DIAG_PIN                         P1_27  // Z-STOP
 #define E0_DIAG_PIN                        P1_26  // E0DET
-#define E1_DIAG_PIN                        P1_25  // E1DET
+//#define E1_DIAG_PIN                        P1_25  // E1DET
 
 //
 // Limit Switches
@@ -90,9 +90,9 @@
 #ifdef Y_STALL_SENSITIVITY
   #define Y_STOP_PIN                  Y_DIAG_PIN
   #if Y_HOME_TO_MIN
-    #define Y_MAX_PIN                      P1_25  // E1DET
+    //#define Y_MAX_PIN                      P1_25  // E1DET
   #else
-    #define Y_MIN_PIN                      P1_25  // E1DET
+    //#define Y_MIN_PIN                      P1_25  // E1DET
   #endif
 #elif ENABLED(Y_DUAL_ENDSTOPS)
   #ifndef Y_MIN_PIN
@@ -129,14 +129,14 @@
 // Z Probe (when not Z_MIN_PIN)
 //
 #ifndef Z_MIN_PROBE_PIN
-  #define Z_MIN_PROBE_PIN                  P1_00
+  #define Z_MIN_PROBE_PIN                  P1_25
 #endif
 
 //
 // Filament Runout Sensor
 //
 #define FIL_RUNOUT_PIN                     P1_26  // E0DET
-#define FIL_RUNOUT2_PIN                    P1_25  // E1DET
+//#define FIL_RUNOUT2_PIN                    P1_25  // E1DET
 
 //
 // Power Supply Control
