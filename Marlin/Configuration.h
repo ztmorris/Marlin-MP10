@@ -1094,9 +1094,11 @@
 //#define USE_UMIN_PLUG
 //#define USE_VMIN_PLUG
 //#define USE_WMIN_PLUG
-//#define USE_XMAX_PLUG
-//#define USE_YMAX_PLUG
-//#define USE_ZMAX_PLUG
+// Edit: defined these to use with endstop, probe, power loss
+#define USE_XMAX_PLUG
+#define USE_YMAX_PLUG
+#define USE_ZMAX_PLUG
+// End Edit: defined these to use with endstop, probe, power loss
 //#define USE_IMAX_PLUG
 //#define USE_JMAX_PLUG
 //#define USE_KMAX_PLUG
@@ -1157,7 +1159,7 @@
 // Mechanical endstop with COM to ground and NC to Signal uses "false" here (most common setup).
 #define X_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define Y_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
-#define Z_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
+#define Z_MIN_ENDSTOP_INVERTING true // Set to true to invert the logic of the endstop.
 #define I_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define J_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define K_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
@@ -3431,14 +3433,3 @@
 
 // Disable servo with M282 to reduce power consumption, noise, and heat when not in use
 //#define SERVO_DETACH_GCODE
-
-// USING E1 EXTRUDER
-#define E0_STEP_PIN                       E1_STEP_PIN
-#define E0_DIR_PIN                        E1_DIR_PIN
-#define E0_ENABLE_PIN                     E1_ENABLE_PIN
-#ifndef E0_CS_PIN
-  #define E0_CS_PIN                       E1_CS_PIN
-#endif
-
-#define E0_SERIAL_TX_PIN                  E1_SERIAL_TX_PIN
-#define FIL_RUNOUT_PIN                    PS_ON_PIN
