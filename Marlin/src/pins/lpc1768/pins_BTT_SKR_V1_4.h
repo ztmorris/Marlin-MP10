@@ -129,7 +129,7 @@
 // Z Probe (when not Z_MIN_PIN)
 //
 #ifndef Z_MIN_PROBE_PIN
-  #define Z_MIN_PROBE_PIN                  P0_10
+  // #define Z_MIN_PROBE_PIN                  P0_10
   #define Z_MIN_PROBE_PIN                  P1_27
 #endif
 
