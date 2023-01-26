@@ -78,13 +78,13 @@
   #endif
 #elif ENABLED(X_DUAL_ENDSTOPS)
   #ifndef X_MIN_PIN
-    #define X_MIN_PIN                      P1_29  // X-STOP
+    #define X_MIN_PIN                      P1_26  // X-STOP
   #endif
   #ifndef X_MAX_PIN
     #define X_MAX_PIN                      P1_26  // E0DET
   #endif
 #else
-  #define X_STOP_PIN                       P1_29  // X-STOP
+  #define X_STOP_PIN                       P1_26  // X-STOP
 #endif
 
 #ifdef Y_STALL_SENSITIVITY
@@ -96,13 +96,13 @@
   #endif
 #elif ENABLED(Y_DUAL_ENDSTOPS)
   #ifndef Y_MIN_PIN
-    #define Y_MIN_PIN                      P1_28  // Y-STOP
+    #define Y_MIN_PIN                      P1_25  // Y-STOP
   #endif
   #ifndef Y_MAX_PIN
     #define Y_MAX_PIN                      P1_25  // E1DET
   #endif
 #else
-  #define Y_STOP_PIN                       P1_28  // Y-STOP
+  #define Y_STOP_PIN                       P1_25  // Y-STOP
 #endif
 
 #ifdef Z_STALL_SENSITIVITY
@@ -110,7 +110,7 @@
   #if Z_HOME_TO_MIN
     #define Z_MAX_PIN                      P1_00  // PWRDET
   #else
-    #define Z_MIN_PIN                      P1_00  // PWRDET
+    #define Z_MIN_PIN                      P1_27  // PWRDET
   #endif
 #elif ENABLED(Z_MULTI_ENDSTOPS)
   #ifndef Z_MIN_PIN
@@ -130,13 +130,14 @@
 //
 #ifndef Z_MIN_PROBE_PIN
   #define Z_MIN_PROBE_PIN                  P0_10
+  #define Z_MIN_PROBE_PIN                  P1_27
 #endif
 
 //
 // Filament Runout Sensor
 //
-#define FIL_RUNOUT_PIN                     P1_26  // E0DET
-#define FIL_RUNOUT2_PIN                    P1_25  // E1DET
+#define FIL_RUNOUT_PIN                     P1_29  // E0DET
+#define FIL_RUNOUT2_PIN                    P1_29  // E1DET
 
 //
 // Power Supply Control
