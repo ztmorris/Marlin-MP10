@@ -636,7 +636,7 @@
  * (especially before PID tuning). Setting the target temperature too close to MAXTEMP guarantees
  * a MAXTEMP shutdown! Use these values to forbid temperatures being set too close to MAXTEMP.
  */
-#define HOTEND_OVERSHOOT 15   // (°C) Forbid temperatures over MAXTEMP - OVERSHOOT
+#define HOTEND_OVERSHOOT 20   // (°C) Forbid temperatures over MAXTEMP - OVERSHOOT
 #define BED_OVERSHOOT    10   // (°C) Forbid temperatures over MAXTEMP - OVERSHOOT
 #define COOLER_OVERSHOOT  2   // (°C) Forbid temperatures closer than OVERSHOOT
 
@@ -787,7 +787,7 @@
  * When set to any value below 255, enables a form of PWM to the chamber heater that acts like a divider
  * so don't use it unless you are OK with PWM on your heater. (See the comment on enabling PIDTEMPCHAMBER)
  */
-#define MAX_CHAMBER_POWER 255 // limits duty cycle to chamber heater; 255=full current
+//#define MAX_CHAMBER_POWER 255 // limits duty cycle to chamber heater; 255=full current
 
 #if ENABLED(PIDTEMPCHAMBER)
   #define MIN_CHAMBER_POWER 0
@@ -1227,8 +1227,8 @@
 // Complete calculated stepps
 // #define DEFAULT_AXIS_STEPS_PER_UNIT   {94.40196356084208,94.33962264150944, 800, 104.16666666666667 }
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 500 }
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {94.40196356084208,94.33962264150944, 800, 104.16666666666667 } // was 100, 100, 400, 50
-
+// #define DEFAULT_AXIS_STEPS_PER_UNIT   {94.40196356084208,94.33962264150944, 800, 104.16666666666667 } // was 100, 100, 400, 50
+// 
 /**
  * Default Max Feed Rate (linear=mm/s, rotational=°/s)
  * Override with M203
