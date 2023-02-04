@@ -544,7 +544,7 @@
 #define TEMP_SENSOR_5 0
 #define TEMP_SENSOR_6 0
 #define TEMP_SENSOR_7 0
-#define TEMP_SENSOR_BED 0
+#define TEMP_SENSOR_BED 1
 #define TEMP_SENSOR_PROBE 0
 #define TEMP_SENSOR_CHAMBER 0
 #define TEMP_SENSOR_COOLER 0
@@ -613,7 +613,7 @@
 #define HEATER_5_MINTEMP   5
 #define HEATER_6_MINTEMP   5
 #define HEATER_7_MINTEMP   5
-//#define BED_MINTEMP        5
+#define BED_MINTEMP        5
 //#define CHAMBER_MINTEMP    5
 
 // Above this temperature the heater will be switched off.
@@ -627,7 +627,7 @@
 #define HEATER_5_MAXTEMP 275
 #define HEATER_6_MAXTEMP 275
 #define HEATER_7_MAXTEMP 275
-//#define BED_MAXTEMP      150
+#define BED_MAXTEMP      150
 //#define CHAMBER_MAXTEMP  60
 
 /**
@@ -736,7 +736,7 @@
  */
 #define PIDTEMPBED
 
-#define BED_LIMIT_SWITCHING
+//#define BED_LIMIT_SWITCHING
 
 /**
  * Max Bed Power
@@ -851,7 +851,7 @@
  */
 
 #define THERMAL_PROTECTION_HOTENDS // Enable thermal protection for all extruders
-//#define THERMAL_PROTECTION_BED     // Enable thermal protection for the heated bed
+#define THERMAL_PROTECTION_BED     // Enable thermal protection for the heated bed
 //#define THERMAL_PROTECTION_CHAMBER // Enable thermal protection for the heated chamber
 //#define THERMAL_PROTECTION_COOLER  // Enable thermal protection for the laser cooling
 
@@ -2275,19 +2275,19 @@
 //
 #define PREHEAT_1_LABEL       "PLA"
 #define PREHEAT_1_TEMP_HOTEND 200
-// #define PREHEAT_1_TEMP_BED     60
+#define PREHEAT_1_TEMP_BED     60
 #define PREHEAT_1_TEMP_CHAMBER 0
 #define PREHEAT_1_FAN_SPEED     0 // Value from 0 to 255
 
 #define PREHEAT_2_LABEL       "PETG"
 #define PREHEAT_2_TEMP_HOTEND 250
-// #define PREHEAT_2_TEMP_BED    85
+#define PREHEAT_2_TEMP_BED    85
 #define PREHEAT_2_TEMP_CHAMBER 0
 #define PREHEAT_2_FAN_SPEED     0 // Value from 0 to 255
 
 #define PREHEAT_3_LABEL       "TPU"
 #define PREHEAT_3_TEMP_HOTEND 230
-// #define PREHEAT_3_TEMP_BED    85
+#define PREHEAT_3_TEMP_BED    85
 #define PREHEAT_3_TEMP_CHAMBER 0
 #define PREHEAT_3_FAN_SPEED     0 // Value from 0 to 255
 // @section motion
